@@ -41,15 +41,16 @@ def plot_golden(input, historyLength):
         ax = fig.add_subplot(spec[index, 0])
         ax.xaxis.set_major_locator(ticker.MultipleLocator(10))
         ax.plot(data.close);
-        ax.axhline(sp382, c='r')
-        ax.axhline(sp382_stats, c='m')
-        ax.axhline(sp618, c='g')
-        ax.axhline(sp618_stats, c='k')
-        ax.fill_between(data.index, above618, below618, alpha=0.5, color='r')
-        ax.fill_between(data.index, above382, below382, alpha=0.5, color='g')
+        ax.axhline(below382, c='r')
+        ax.axhline(above618, c='m')
+        #ax.axhline(sp618, c='g')
+        #ax.axhline(sp618_stats, c='k')
+        #ax.fill_between(data.index, above618, below618, alpha=0.5, color='r')
+        #ax.fill_between(data.index, above382, below382, alpha=0.5, color='g')
+        ax.fill_between(data.index, above618, below382, alpha=0.5, color='r')
         
         ax.set_title(name,fontsize=16)
-        ax.legend(['close', 'sp382:{:.2f}'.format(sp382), 'sp382_stats:{:.2f}'.format(sp382_stats), 'sp618:{:.2f}'.format(sp618), 'sp618_stats:{:.2f}'.format(sp618_stats)], loc='right',bbox_to_anchor=(1.5, 0.5))  
+        ax.legend(['close', 'below382:{:.2f}'.format(below382), 'above618:{:.2f}'.format(above618)], loc='right',bbox_to_anchor=(1.5, 0.5))  
         
         
 def plot_golden_for_option(input, historyLength):
@@ -87,15 +88,16 @@ def plot_golden_for_option(input, historyLength):
             ax = fig.add_subplot(spec[index, 0])
             ax.xaxis.set_major_locator(ticker.MultipleLocator(10))
             ax.plot(data.close);
-            ax.axhline(sp382, c='r')
-            ax.axhline(sp382_stats, c='m')
-            ax.axhline(sp618, c='g')
-            ax.axhline(sp618_stats, c='k')
-            ax.fill_between(data.index, above618, below618, alpha=0.5, color='r')
-            ax.fill_between(data.index, above382, below382, alpha=0.5, color='g')
+            ax.axhline(below382, c='r')
+            ax.axhline(above618, c='m')
+            #ax.axhline(sp618, c='g')
+            #ax.axhline(sp618_stats, c='k')
+            #ax.fill_between(data.index, above618, below618, alpha=0.5, color='r')
+            #ax.fill_between(data.index, above382, below382, alpha=0.5, color='g')
+            ax.fill_between(data.index, above618, below382, alpha=0.5, color='r')
             
             ax.set_title(name,fontsize=16)
-            ax.legend(['close', 'sp382:{:.2f}'.format(sp382), 'sp382_stats:{:.2f}'.format(sp382_stats), 'sp618:{:.2f}'.format(sp618), 'sp618_stats:{:.2f}'.format(sp618_stats)], loc='right',bbox_to_anchor=(1.5, 0.5))              
+            ax.legend(['close', 'below382:{:.2f}'.format(below382), 'above618:{:.2f}'.format(above618)], loc='right',bbox_to_anchor=(1.5, 0.5))              
         
 
                 
