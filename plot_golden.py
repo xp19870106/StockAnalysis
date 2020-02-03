@@ -10,8 +10,8 @@ import matplotlib.ticker as ticker
 import matplotlib.gridspec as gridspec
 
 def plot_golden(input, historyLength):
-    mpl.rcParams['font.sans-serif'] = ['FangSong'] # 指定默认字体
-    mpl.rcParams['axes.unicode_minus'] = False # 解决保存图像是负号'-'显示为方块的问题
+    mpl.rcParams['font.sans-serif'] = ['FangSong']
+    mpl.rcParams['axes.unicode_minus'] = False
     endTime = datetime.datetime.now()
     endTimeStr = endTime.strftime("%Y-%m-%d") 
     startTime = (endTime - datetime.timedelta(days = historyLength)) 
@@ -54,8 +54,8 @@ def plot_golden(input, historyLength):
         
         
 def plot_golden_for_option(input, historyLength):
-    mpl.rcParams['font.sans-serif'] = ['FangSong'] # 指定默认字体
-    mpl.rcParams['axes.unicode_minus'] = False # 解决保存图像是负号'-'显示为方块的问题
+    mpl.rcParams['font.sans-serif'] = ['FangSong']
+    mpl.rcParams['axes.unicode_minus'] = False
     endTime = datetime.datetime.now()
     endTimeStr = endTime.strftime("%Y-%m-%d") 
     startTime = (endTime - datetime.timedelta(days = historyLength)) 
